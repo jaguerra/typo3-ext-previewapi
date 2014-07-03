@@ -19,8 +19,15 @@ class Cms {
 	 	 * @return boolean
 	 	 * @api
 	 	 */
-		public function assertBackendUserLoggedIn() {
+		public function isBackendUserLoggedIn() {
 				return is_array($this->getCurrentBackendUser());
+		}
+
+		/**
+ 		 *
+ 		 */
+		public function isInVersioningPreview() {
+				return $GLOBALS['TSFE']->sys_page->versioningPreview;
 		}
 
 }
